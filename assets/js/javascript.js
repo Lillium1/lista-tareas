@@ -61,61 +61,53 @@ var arr = [
   }
 ];
 
-/* prueba 1
-arr.forEach(function(valorActual){
-	var title = valorActual.title; 
-	var nuevaTarea = document.createElement("li");
-	nuevaTarea.appendChild(title); 
-	var nuevoli = getElementsByClassName("lista");
-	nuevaTarea.appendChild(nuevoli);
-}
-*/
+var tareas = document.getElementById("lista");
 
-function imprimir(){
-    var titulo = document.getElementById("lista");
+function agregarArr(){
     arr.forEach(function(valorActual){ 
-      titulo.innerHTML += '<li>' + valorActual.title + '</li>';
+      tareas.innerHTML += '<li>' + valorActual.title + '</li>';
     })    
 }
-imprimir();
+agregarArr();
+
+function agregarTarea(){
+    var tareaIngresada = document.getElementById("tareaIngresada").value;
+    tareas.innerHTML += '<li>' + tareaIngresada + '</li>';
+}
+
+agregarTarea();
 
 
 /*
-var arregloVacio = document.getElementById("arr_10");
-var ruta = arr.length;
-arregloVacio.innerHTML = arr[ruta].title;
 
+    var nuevaTarea = document.createElement("li");
+    var contenido = document.createTextNode(tarea);
 
-(function () {
-
-	var lista= document.getElementById("lista");
-	var tareaInicial= document.getElementById("tareaInicial");
-	var botonTarea = document.getElementById("boton-agregar");
-	
-	var sumarTareas = function (){
-		var tarea = tareaInicial.value;
-		var nuevaTarea = document.createElement("li");
-		contenido = document.createTextNode(tarea);
-		if(tarea === "") {
-            tareaInput.setAttribute("placeholder", "Agrega una tarea válida");
-            tareaInput.className = "error";
-            return false;
-        }
-
-        enlace.appendChild(contenido);
-        enlace.setAttribute("href", "#");
-        nuevaTarea.appendChild(enlace);
-        lista.appendChild(nuevaTarea);
-        tareaInput.value = "";
-        
-        for (var i = 0; i <= lista.children.length -1; i++){
-        lista.children[i].addEventListener("click",function(){
-            this.parentNode.removeChild(this);
-        });
+    //validad 
+    if (tarea === "") {
+      tareaIngresada.setAttribute("placeholder", "Agrega una tarea valida");
+      tareaIngresada.className = "error";
+      return false;
     }
-        
-    };
 
 */
+
+
+
+
+
+
+/* prueba 1
+arr.forEach(function(valorActual){
+  var title = valorActual.title; 
+  var nuevaTarea = document.createElement("li");
+  nuevaTarea.appendChild(title); 
+  var nuevoli = getElementsByClassName("lista");
+  nuevaTarea.appendChild(nuevoli);
+}
+*/
+
+
+
 
 

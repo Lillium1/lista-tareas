@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
 	<title>Lista de Tareas</title>
 </head>
 <body>
 	<div class="madre">
 		<form class="formulario" action="">
-			<input type="text" id="tareaInicial" placeholder="Agrega tu tarea">
-			<input type="button" onclick="imprimir()" class="boton" id="boton-agregar" value="Agregar Tarea">
+			<input type="text" id="tareaIngresada" placeholder="Agrega tu tarea">
+			<button type="button" onclick="agregarTarea()" class="boton" id="boton-agregar">Añadir Tarea</button>
 		</form>	
 		
 	</div>
 
 	<div class="tareas">
-		<ul id="lista">
-		</ul>
-		</div>
+		<ul id="lista"></ul>
 	</div>
+	</div>
+
 	<script src="assets/js/javascript.js"></script>
 </body>
 </html>
